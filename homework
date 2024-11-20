@@ -1,0 +1,43 @@
+from tkinter import *
+root=Tk()
+root.geometry("350x500")
+label=Label(root, text="Hello! Welcome to the library!",font="50")
+label.pack()
+frame=Frame(root)
+frame.pack()
+
+
+listbox=Listbox(root , height=8,width=30,bg="lightblue",activestyle="dotbox",font="Helvetica",fg="Black")
+
+#Define a label for the list.
+label = Label(root, text=" Top Library books")
+listbox.insert(1, "Harry Potter and the Philospher Stone")
+listbox.insert(2, "The Inheritance games")
+listbox.insert(3, "Geek Girl")
+listbox.insert(4, "Saffiyah's War")
+listbox.insert(5, "Geography Textbook 1")
+
+b1_button = Button(frame, text="2 librarians", fg="brown", bg="white")
+b1_button.pack(side=RIGHT)
+
+b2_button = Button(frame, text="1000 Books", fg="brown", bg="white")
+b2_button.pack(side=RIGHT)
+
+b3_button = Button(frame, text= "HAVE FUN!", fg="blue",bg="beige")
+b3_button.pack(side=BOTTOM)
+
+btn1=Button(root, text='Click me !',bd='5',background="orange",command=root.destroy)
+btn1.pack(side='bottom')
+
+scrollbar=Scrollbar(root)
+scrollbar.pack(side=RIGHT, fill=Y)
+
+mylist= Listbox(root , yscrollcommand=scrollbar.set)
+
+for line in range(1,1000):
+    mylist.insert(1-1000)
+
+    mylist.pack(side=BOTTOM , fill=BOTH)
+label.pack()
+listbox.pack()
+root.mainloop()
